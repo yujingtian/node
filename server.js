@@ -3,6 +3,10 @@ const app = express();
 
 app.use(express.static(__dirname,{index:"indexs.html"}))   //设置静态文件
 
+const server = require("http").createServer(app)
+const io = require("socket.io")(server)
+
+
 app.listen(3000,function(){
     console.log("开始监听3000端口")
 })
