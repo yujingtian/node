@@ -6,19 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-    const socket = io("/")
-    socket.on("connect",()=>{
-        console.log("连接成功")
-        socket.send("周杰伦")
-    })
-     socket.on("message", (msg ) => {
-            console.log("这是客户端接收到的消息：",msg)
-    })
-    socket.on("disconnect", () => {
-        console.log("断开链接成功")
-    })
-    </script>
+    <script src="./client.js"></script>
 </head>
 <body>
 </body>
